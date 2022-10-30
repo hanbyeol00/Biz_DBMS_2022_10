@@ -177,12 +177,8 @@ city table 과 cointry table 을 참조하여
 인구가 1만 이상 5만 이하인 도시의 국가 이름이 무엇인가 조회하기
 */
 
-SELECT CountryCode, name, avg(Population)
-FROM city
-WHERE  Population BETWEEN 10000 and 50000
-GROUP BY CountryCode
-ORDER BY CountryCode;
-
-select CountryCode, name, Population
-from city 
-WHERE CountryCode in (select Name from country);
+select C.code, T.name, T.Population
+from city T, country C
+WHERE T.CountryCode = C.code
+and T.Population BETWEEN 10000 and 50000
+ORDER BY T.Population asc;
