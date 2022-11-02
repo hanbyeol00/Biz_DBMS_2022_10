@@ -177,8 +177,22 @@ city table 과 cointry table 을 참조하여
 인구가 1만 이상 5만 이하인 도시의 국가 이름이 무엇인가 조회하기
 */
 
-select C.code, T.name, T.Population
+select C.code 국가, T.name 도시, T.Population 인구
 from city T, country C
 WHERE T.CountryCode = C.code
 and T.Population BETWEEN 10000 and 50000
 ORDER BY T.Population asc;
+
+/*
+DBMS (DataBase Managiment System)
+1. 많은 데이터를 스토리지에 보관하관리하는 소프트웨어
+2. 스토리지에 보관된 많은 데이터 중에서 원하는 조건의 데이터를 쉽게 조회할 수 있게 구성된 소프트 웨어
+RDBMS (RelationShip DataBase Managiment System)
+1. E(Entity) - R(Relation) 관계형 데이터베이스 시스템
+2. 많은 데이터를 관리하는 데이터베이스 소프트웨어중
+   모든 데이터를 "Table(테이블)" 이라는 관점으로 DB를 관리하는 시스템
+3. SQL(Structed Query Lang.)명령어를 사용하여 데이터를 관리
+NoSQL(Not Only SQL)
+1. RDMS 의 table 구조 DB 가 아닌 Document(JSON) 구조의 DB에 데이터 저장
+2. 짧은 시간에 대량(Big)의 데이터를 추가하고, 대량의 데이터를 분석 구조화 가능
+*/
