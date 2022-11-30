@@ -11,3 +11,8 @@
 * NoSQL(Not Only SQL, RDBMS 와 비 SQL 형식)
 * Schema(DataBase) / Collection / Doc
 * JSON type 으로 기본 데이터를 저장한다
+
+## MongoDB Cloud
+* mongosh "mongodb+srv://cluster0.f0xpsz1.mongodb.net/myFirstDatabase" --apiVersion 1 --username hanbyeol
+
+* mongosh "mongodb+srv://cluster0.lsn6sio.mongodb.net/myFirstDatabase" --apiVersion 1 --username hanbyeol
